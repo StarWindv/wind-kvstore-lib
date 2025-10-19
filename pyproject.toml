@@ -1,0 +1,19 @@
+[build-system]
+requires = ["maturin>=1.9,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "wind_kvcore"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+license = { text = "MIT" }
+readme = "readme.md"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+python-source = "."
